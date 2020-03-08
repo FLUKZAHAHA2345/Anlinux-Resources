@@ -16,7 +16,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "http://os.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
+		wget "http://os.archlinuxarm.org/os/ArchLinuxARM-${archurl}-chromebook-latest.tar.gz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
@@ -79,6 +79,6 @@ echo "removing image for some space"
 rm $tarball
 echo "You can now launch Arch Linux with the ./${bin} script"
 echo "Preparing additional component for the first time, please wait..."
-wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/amd64/resolv.conf" -P arch-fs/root
-wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/amd64/additional.sh" -P arch-fs/root
+wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/arm64/resolv.conf" -P arch-fs/root
+wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/arm64/additional.sh" -P arch-fs/root
 echo "done"
