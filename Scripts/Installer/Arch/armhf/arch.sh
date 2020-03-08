@@ -16,7 +16,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "http://os.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
+		wget "http://os.archlinuxarm.org/os/ArchLinuxARM-${archurl}-chromebook-latest.tar.gz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
